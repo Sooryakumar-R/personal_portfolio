@@ -1,11 +1,71 @@
-.root
-{
-    --primary_color-:black;
-    --background_color-:rgb(255, 255, 255)
+:root {
+    --primary-color: rgba(0, 0, 0, 0.822);
+    --background-color: #212529;
+    --text-color: #c770f0;
+    --white_color:white;
 }
 
+#header {
+    background-color:var(--primary-color) ;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    justify-content: right;
+    z-index: 1000;
+    top:0;
 
-#test{
-    height:1000px;
-    background-color: var(--background_color--);
+    
 }
+#header h2{
+    margin:20px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px;
+    color: var(--white_color);
+
+    
+}
+
+#test {
+    height: 1000px;
+    background-image: linear-gradient(180deg, var(--primary-color),var(--text-color));
+
+}
+
+/* Style for the menu button
+.menu-button {
+    display: none;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media query for small screens */
+/* @media (max-width:600px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 1;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    #header a {
+        display: none;
+    }
+
+    #header.open a {
+        display: block;
+        text-align: right;
+    }
+} */ 

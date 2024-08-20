@@ -1,28 +1,40 @@
 import { useState } from "react";
 import "../Styles/HomePage.css";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 function HomePage() {
-    const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+const handleClick = () => {
+    window.open('https://www.linkedin.com/in/sooryakumar-r-8561b8227', '_blank');
+};
 
     return (
         <>
-            <div id="header">
-                <h2><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>Home</a></h2>
-                <h2><a href="">Contact</a></h2>
-                <h2><a href="">Resume</a></h2>
-                <h2><a href="">Github</a></h2>
-                <h2><a href="">Linkedin</a></h2>
-                <h2><a href="">Share</a></h2>
+            <div id="nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Experience</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
             </div>
             <div id="test">
-                <br /><br />
-                <br /><br />
-                <br /><br />
-                <h2>Body</h2>
+                
+            </div>
+            <div id="footer">
+                <h3>Designed and Developed by Sooryakumar R</h3>
+                <h3>Copyright © 2024 SO.</h3>
+                <div id="icon">
+                <FontAwesomeIcon
+                    icon={faLinkedin}
+                    size="2x" // Adjust the size as needed
+                    style={{ cursor: 'pointer', color: 'white' }} // LinkedIn color
+                    
+                />
+                </div>
+                            
+
             </div>
         </>
     );
